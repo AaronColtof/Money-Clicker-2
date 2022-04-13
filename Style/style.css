@@ -3,15 +3,17 @@ h1 {
     font-weight: bold;
 }
 
-#clicker-button {
+#img_clicker-button {
     width: 250px;
     height: auto;
 }
 
-#text_clicker-button {  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
+#img_clicker-button {
+  width: 250px;
+  height: auto;
+  visibility: visible;
+}
+
+#clicker-button {
+  visibility: hidden;
 }
