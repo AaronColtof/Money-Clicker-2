@@ -1,0 +1,1 @@
+document.getElementById("clicker-button").addEventListener("click",alert("hoi"));

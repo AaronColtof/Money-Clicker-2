@@ -6,10 +6,11 @@ h1 {
 #img_clicker-button {
     width: 250px;
     height: auto;
+    visibility: visible;
 }
 
-#img_clicker-button {
-  width: 250px;
+#img_clicker-button:hover {
+  width: 260px;
   height: auto;
   visibility: visible;
 }
