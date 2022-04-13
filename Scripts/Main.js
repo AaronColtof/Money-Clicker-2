@@ -6,13 +6,20 @@ let currentMoneyText = document.getElementById("moneyText");
 let botCPSText = document.getElementById("botCPSText");
 let totalMoneyText = document.getElementById("totalMoney");
 
+let moneyButton = document.getElementById("moneyButton").addEventListener("click", moneyButtonClicked);
+
 function addMoney(moneyToAdd){
-    console.log(moneyToAdd);
     currentMoney += moneyToAdd;
 }
 
 function subtractMoney(moneyToSubtract){
     currentMoney -= moneyToSubtract;
+}
+
+function moneyButtonClicked(){
+    addMoney(1);
+    addToTotalMoneyEarned(1);
+    updateMoneyText();
 }
 
 function updateMoneyText(){
