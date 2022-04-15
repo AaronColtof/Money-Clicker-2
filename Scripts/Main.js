@@ -16,6 +16,10 @@ function subtractMoney(moneyToSubtract){
     currentMoney -= moneyToSubtract;
 }
 
+function sleep(ms) { //sleep function
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function moneyButtonClicked(){
     addMoney(1);
     addToTotalMoneyEarned(1);
