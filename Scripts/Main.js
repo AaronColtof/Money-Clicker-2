@@ -23,18 +23,19 @@ function sleep(ms) {
 
 function moneyButtonClicked(){
     addMoney(1);
-    updateMoneyText();
+    updateMoneyTextAndSaveStats();
 }
 
-function updateMoneyText(){
+function updateMoneyTextAndSaveStats(){
     currentMoneyText.innerHTML = "Money: " + currentMoney;
     botCPSText.innerHTML = "CPS: " + botCPS; 
     totalMoneyText.innerHTML = "Total: " + totalMoneyEarned; 
+    saveStats();
 }
 
 function addBotCPS(){
     addMoney(botCPS);
-    updateMoneyText();
+    updateMoneyTextAndSaveStats();
 }
 
 function loadStats(){
@@ -78,5 +79,4 @@ setInterval(function update(){
 }, 1000);
 
 setInterval(function FixedUpdate(){
-    saveStats();
 }, 60);
