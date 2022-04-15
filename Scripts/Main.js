@@ -39,9 +39,38 @@ function addBotCPS(){
     updateMoneyText();
 }
 
+function loadStats(){
+    let nCurrentMoney = window.localStorage.getItem('saveclick');
+    let nBotCPS = window.localStorage.getItem('savecps');
+    let nTotalEarned = window.localStorage.getItem('savetotal');
+
+    if (nCurrentMoney == null) {
+        currentMoney = 100;
+    } else {
+        currentMoney = parseInt(nCurrentMoney);
+    }
+    if (nBotCPS == null) {
+        botCPS = 0;
+    } else {
+        botCPS = parseInt(nBotCPS);
+    }
+    if (nTotalEarned == null) {
+        totalMoneyEarned = 100;
+    } else {
+        totalMoneyEarned = parseInt(nTotalEarned);
+    }
+}
+
+function saveStats(){
+    window.localStorage.setItem('saveclick', currentMoney);
+    window.localStorage.setItem('savecps', botCPS);
+    window.localStorage.setItem('savetotal', totalMoneyEarned);
+}
+
 function start()
 {
-
+    loadStats();
+    saveStats();
 }
 
 start();
@@ -49,3 +78,7 @@ start();
 setInterval(function update(){
     addBotCPS();
 }, 1000);
+
+setInterval(function FixedUpdate(){
+    saveStats();
+}, 60);
