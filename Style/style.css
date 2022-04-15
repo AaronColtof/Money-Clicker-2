@@ -3,7 +3,7 @@ h1 {
     font-weight: bold;
 }
 
-#img_clicker-button {
+#MoneyButton {
     width: 250px;
     height: auto;
     visibility: visible;
@@ -11,10 +11,10 @@ h1 {
     margin: 10px;
 }
 
-#img_clicker-button:hover {
-  transform: scale(1.1,1.1);
+#MoneyButton:hover {
+  transform: scale(1.05,1.05);
 }
 
-#moneyButton {
-  visibility: hidden;
+#moneyButton:active {
+  transform: scale(0.95,0.95);
 }
