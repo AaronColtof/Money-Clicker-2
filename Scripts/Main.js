@@ -10,19 +10,19 @@ let moneyButton = document.getElementById("moneyButton").addEventListener("click
 
 function addMoney(moneyToAdd){
     currentMoney += moneyToAdd;
+    totalMoneyEarned += moneyToAdd;
 }
 
 function subtractMoney(moneyToSubtract){
     currentMoney -= moneyToSubtract;
 }
 
-function sleep(ms) { //sleep function
+function sleep(ms) { 
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function moneyButtonClicked(){
     addMoney(1);
-    addToTotalMoneyEarned(1);
     updateMoneyText();
 }
 
@@ -32,14 +32,8 @@ function updateMoneyText(){
     totalMoneyText.innerHTML = "Total: " + totalMoneyEarned; 
 }
 
-function addToTotalMoneyEarned(moneyAdded)
-{
-    totalMoneyEarned += moneyAdded;
-}
-
 function addBotCPS(){
-    currentMoney += botCPS;
-    addToTotalMoneyEarned(botCPS);
+    addMoney(botCPS);
     updateMoneyText();
 }
 
