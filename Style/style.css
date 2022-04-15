@@ -18,3 +18,11 @@ h1 {
 #moneyButton:active {
   transform: scale(0.95,0.95);
 }
+
+#earth-image {
+  width: 380px;
+}
+
+#earth-image_div {
+  text-align: center;
+}

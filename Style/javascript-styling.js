@@ -6,9 +6,9 @@ function sleep(ms) { //sleep function
 
 function rotate_image(image) {
     document.getElementById(image).style.transform = "rotate("+rotate+"deg)";
-    rotate += 1;
+    rotate += 0.1;
 }
 
 setInterval(function update(){
     rotate_image("earth-image")
-}, 500);
+}, 50);
