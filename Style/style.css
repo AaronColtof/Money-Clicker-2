@@ -11,7 +11,12 @@ h1 {
     margin: 10px;
 }
 
-#MoneyButton:hover {
+#main {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#moneyButton:hover {
   transform: scale(1.05,1.05);
 }
 
@@ -25,4 +30,21 @@ h1 {
 
 #earth-image_div {
   text-align: center;
+}
+
+#business_items {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#small_office {
+  width: 150px;
+}
+
+#small_office:hover {
+  transform: scale(1.05,1.05);
+}
+
+#small_office:active {
+  transform: scale(0.95,0.95);
 }
