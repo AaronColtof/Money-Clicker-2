@@ -15,11 +15,6 @@ body{
     margin: 10px;
 }
 
-#main {
-  display: flex;
-  justify-content: flex-start;
-}
-
 #moneyButton:hover {
   transform: scale(1.05,1.05);
 }
@@ -34,15 +29,12 @@ body{
 
 #earth-image_div {
   text-align: center;
-}
-
-#business_items {
-  display: flex;
-  justify-content: flex-end;
+  border: 2px solid rgb(0, 0, 0);
 }
 
 #small_office {
-  width: 150px;
+  width: 100px;
+  margin: 2px;
 }
 
 #small_office:hover {
@@ -55,4 +47,24 @@ body{
 
 .center {
   text-align: center;
+}
+
+#main {
+  float: left;
+}
+
+#business_items {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.office_stats {
+  float: right;
+}
+
+.office_cost {
+  align-items: flex-start;
+}
+
+.office_cps {
+  align-items: flex-end;
 }
