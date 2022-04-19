@@ -2,6 +2,8 @@ let currentMoney = 100;
 let totalMoneyEarned = 100;
 let botCPS = 0;
 
+let CPS = 0;
+
 let currentMoneyText = document.getElementById("moneyText");
 let botCPSText = document.getElementById("botCPSText");
 let totalMoneyText = document.getElementById("totalMoney");
@@ -24,6 +26,7 @@ function sleep(ms) {
 function moneyButtonClicked(){
     addMoney(1);
     updateMoneyTextAndSaveStats();
+    CPS += 1;
 }
 
 function updateMoneyTextAndSaveStats(){
@@ -76,6 +79,14 @@ start();
 
 setInterval(function update(){
     addBotCPS();
+    if (CPS > 20)
+    {
+        currentMoney = 0;
+        totalMoneyEarned = 0;
+        botCPS = 0;
+        alert("Autoclicker detected! CPS > 20 is not allowed!")
+    }
+    CPS = 0;
 }, 1000);
 
 setInterval(function FixedUpdate(){
