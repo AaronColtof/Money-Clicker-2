@@ -3,6 +3,10 @@ h1 {
     font-weight: bold;
 }
 
+body{
+  background-color: rgba(62, 200, 255, 0.223);
+}
+
 #MoneyButton {
     width: 250px;
     height: auto;
@@ -47,4 +51,8 @@ h1 {
 
 #small_office:active {
   transform: scale(0.95,0.95);
+}
+
+.center {
+  text-align: center;
 }
