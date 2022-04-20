@@ -31,16 +31,16 @@ body{
   text-align: center;
 }
 
-#small_office {
+.cps_generator {
   width: 100px;
   margin: 2px;
 }
 
-#small_office:hover {
+.cps_generator:hover {
   transform: scale(1.05,1.05);
 }
 
-#small_office:active {
+.cps_generator:active {
   transform: scale(0.95,0.95);
 }
 
