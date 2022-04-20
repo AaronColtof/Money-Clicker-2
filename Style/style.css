@@ -29,7 +29,6 @@ body{
 
 #earth-image_div {
   text-align: center;
-  border: 2px solid rgb(0, 0, 0);
 }
 
 #small_office {
@@ -53,8 +52,9 @@ body{
   float: left;
 }
 
-#business_items {
-  border: 1px solid rgb(0, 0, 0);
+.business_items {
+  border: 2px solid rgb(0, 0, 0);
+  padding: 4px;
 }
 
 .office_stats {
@@ -67,4 +67,10 @@ body{
 
 .office_cps {
   align-items: flex-end;
+}
+
+#title {
+  background-color: green;
+  text-align: center;
+  padding: 5px;
 }
