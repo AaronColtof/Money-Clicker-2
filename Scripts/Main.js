@@ -10,6 +10,10 @@ let totalMoneyText = document.getElementById("totalMoney");
 
 let moneyButton = document.getElementById("moneyButton").addEventListener("click", moneyButtonClicked);
 
+let smallOffice = document.getElementById("small_office").addEventListener("click", addSmallOffice);
+
+let reset = document.getElementById("reset").addEventListener("click", resetprogress);
+
 function addMoney(moneyToAdd){
     currentMoney += moneyToAdd;
     totalMoneyEarned += moneyToAdd;
@@ -40,6 +44,13 @@ function addBotCPS(){
     addMoney(botCPS);
     updateMoneyTextAndSaveStats();
 }
+
+function addSmallOffice() {
+    if (currentMoney >= 100) {
+        botCPS += 1;
+        subtractMoney(100);
+    };
+};
 
 function loadStats(){
     let nCurrentMoney = window.localStorage.getItem('saveclick');
@@ -88,6 +99,21 @@ setInterval(function update(){
     }
     CPS = 0;
 }, 1000);
+
+function resetprogress() {
+    let sure = prompt("Are you sure? yes/no", "no")
+    if (sure == "no") {
+        pass
+    } 
+    else if (sure == "yes") {
+        currentMoney = 0;
+        totalMoneyEarned = 0;
+        botCPS = 0;
+    }
+    else {
+        alert("Please say yes or no.")
+    }
+}
 
 setInterval(function FixedUpdate(){
 }, 60);
