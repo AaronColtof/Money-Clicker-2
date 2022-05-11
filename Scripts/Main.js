@@ -11,6 +11,8 @@ let totalMoneyText = document.getElementById("totalMoney");
 let moneyButton = document.getElementById("moneyButton").addEventListener("click", moneyButtonClicked);
 
 let smallOffice = document.getElementById("small_office").addEventListener("click", addSmallOffice);
+let mediumOffice = document.getElementById("medium_office").addEventListener("click", addMediumOffice);
+let largeOffice = document.getElementById("large_office").addEventListener("click", addLargeOffice);
 
 let reset = document.getElementById("reset").addEventListener("click", resetprogress);
 
@@ -49,6 +51,20 @@ function addSmallOffice() {
     if (currentMoney >= 100) {
         botCPS += 1;
         subtractMoney(100);
+    };
+};
+
+function addMediumOffice() {
+    if (currentMoney >= 1000) {
+        botCPS += 15;
+        subtractMoney(1000);
+    };
+};
+
+function addLargeOffice() {
+    if (currentMoney >= 10000) {
+        botCPS += 250;
+        subtractMoney(10000);
     };
 };
 
